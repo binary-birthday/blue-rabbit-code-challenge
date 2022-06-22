@@ -4,7 +4,8 @@ const prisma = new PrismaClient()
 async function main() {
   await prisma.user.create({
     data: {
-        name: "Wade Martin"
+        name: "Wade Martin",
+        avatar: "https://blue-rabbit-code-challenge.s3.amazonaws.com/Shaun-Tan-Tales-from-inner-city-prints-the-vision-deer.jpg"
     }
   })
 }
