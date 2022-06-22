@@ -1,8 +1,6 @@
-import { Select } from "@chakra-ui/react"
-
 export const resolvers = {
   Query: {
-    async user(parent, args, ctx, info) {
+    async user(_parent, args, ctx, _info) {
       return await ctx.prisma.user.findUnique({
         where: {
           id: args.id,
@@ -12,7 +10,7 @@ export const resolvers = {
     }
   },
   Mutation: {
-    createUser: async (parent, args, ctx, info) => {
+    createUser: async (_parent, args, ctx, _info) => {
       try {
         const user = await ctx.prisma.user.upsert({
           where: {

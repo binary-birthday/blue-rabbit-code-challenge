@@ -12,6 +12,6 @@ export const typeDefs = gql`
     }
 
     type Mutation {
-    	createUser(name: String!, avatar: String): User
+    	createUser(name: String!, avatar: String): User!
     }
 `
